@@ -1,4 +1,4 @@
-report 65402 "Second Report"
+report 65402 "Customer Cards Report"
 {
     UsageCategory = ReportsAndAnalysis;
     ApplicationArea = All;

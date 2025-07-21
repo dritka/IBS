@@ -4,9 +4,10 @@ page 65401 "Display Page"
     ApplicationArea = All;
     UsageCategory = Lists;
     SourceTable = "Customer Cards Table";
-
+    /*
     Editable = true;
     CardPageId = "Customer Cards Page";
+    */
 
     InsertAllowed = false;
     DeleteAllowed = false;
@@ -41,16 +42,32 @@ page 65401 "Display Page"
                 {
                     ApplicationArea = All;
                 }
+
+                field("Customer Actions"; CustomerActionLbl)
+                {
+                    ApplicationArea = All;
+                    DrillDown = true;
+                    Caption = 'Open customer cards';
+
+                    trigger OnDrillDown()
+                    var
+                        CustomerCards: Page "Customer Cards Page";
+                        CustomerRec: Record "Customer Cards Table";
+                    begin
+                        CustomerRec.SetRange("Customer No.", Rec."Customer No.");
+                        CustomerCards.Run();
+                    end;
+                }
             }
         }
     }
 
     var
-        CustomerNo: Integer;
+        CustomerActionLbl: Label 'Customer Cards';
         Text000: Label 'Cards for the Customer with Customer No.: %1';
 
     trigger OnOpenPage()
     begin
-        Message(Text000, CustomerNo);
+        Message(Text000, Rec."Customer No.");
     end;
 }

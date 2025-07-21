@@ -1,4 +1,4 @@
-report 65401 "First Report"
+report 65401 "Cards Report"
 {
     UsageCategory = ReportsAndAnalysis;
     ApplicationArea = All;
@@ -10,12 +10,6 @@ report 65401 "First Report"
     {
         dataitem(Cards; "Cards Type Table")
         {
-            /*
-            column(CardType; CardTypeLbl) { }
-            column(NoOfSalesOrder; NoOfSalesOrderLbl) { }
-            column(SalesOrderAmount; SalesOrderAmountLbl) { }
-            */
-
             column(Card_Type; "Card Type") { }
             column(No_Of_Sales_Order; NoOfSalesOrder) { }
             column(Sales_Order_Amount; SalesOrderAmount) { }
@@ -36,23 +30,37 @@ report 65401 "First Report"
         }
     }
 
-    /*
-    Set the option to filter
-    the data based on a from
-    and to date.
-    */
     requestpage
     {
         layout
         {
+            area(Content)
+            {
+                field(FromDate; FromDate)
+                {
+                    ApplicationArea = All;
+                    Caption = 'Starting Date';
+                }
 
+                field(ToDate; ToDate)
+                {
+                    ApplicationArea = All;
+                    Caption = 'Ending Date';
+                }
+            }
         }
     }
 
+    labels
+    {
+        CardTypeLbl = 'Card Type';
+        NoOfSalesOrderLbl = 'Nr. Of Sales Order';
+        SalesOrderAmountLbl = 'Sales Order Amount';
+    }
+
     var
+        FromDate: Date;
+        ToDate: Date;
         NoOfSalesOrder: Decimal;
         SalesOrderAmount: Decimal;
-        CardTypeLbl: Label 'Card Type';
-        NoOfSalesOrderLbl: Label 'Nr. Of Sales Order';
-        SalesOrderAmountLbl: Label 'Sales Order Amount';
 }
