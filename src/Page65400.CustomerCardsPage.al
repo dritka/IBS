@@ -97,11 +97,4 @@ page 65400 "Customer Cards Page"
             }
         }
     }
-
-    trigger OnOpenPage()
-    var
-        CustomerCards: Record "Customer Cards Table";
-    begin
-        CustomerCards.DeleteAll(); // Deletes all the entries in the table
-    end;
 }
