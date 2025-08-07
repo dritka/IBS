@@ -1,12 +1,9 @@
-page 65400 "Customer Cards Page"
+page 65402 "Customer Cards List"
 {
-    PageType = Card;
+    PageType = List;
     ApplicationArea = All;
-    UsageCategory = History;
+    UsageCategory = Lists;
     SourceTable = "Customer Cards Table";
-
-    Editable = true;
-    ModifyAllowed = true;
 
     layout
     {
@@ -51,34 +48,4 @@ page 65400 "Customer Cards Page"
             }
         }
     }
-
-    /*
-        actions
-        {
-            area(Processing)
-            {
-                action("Cards Report 1")
-                {
-                    Image = Report;
-                    Promoted = true;
-                    PromotedIsBig = true;
-                    PromotedCategory = Process;
-                    ApplicationArea = All;
-                    Caption = 'Cards Report';
-                    RunObject = report "Cards Report";
-                }
-
-                action("Cards Report 2")
-                {
-                    Image = Report;
-                    Promoted = true;
-                    PromotedIsBig = true;
-                    PromotedCategory = Process;
-                    ApplicationArea = All;
-                    Caption = 'Cards report for each customer';
-                    RunObject = report "Customer Cards Report";
-                }
-            }
-        }
-    */
 }

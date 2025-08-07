@@ -10,21 +10,21 @@ report 65402 "Customer Cards Report"
     {
         dataitem(Customer; "Customer")
         {
+            PrintOnlyIfDetail = true;
             column(Customer_No; "No.") { }
             column(Customer_Name; "Name") { }
-
             dataitem(CustomerCards; "Customer Cards Table")
             {
                 DataItemLink = "Customer No." = field("No.");
                 DataItemLinkReference = Customer;
+                PrintOnlyIfDetail = true;
 
                 column(Card_Type; "Card Type") { }
-
-                dataitem(SalesHeader; "Sales Header")
+                dataitem(SaleseInvoiceHeader; "Sales Invoice Header")
                 {
                     DataItemLink = "Card Type" = field("Card Type");
                     DataItemLinkReference = CustomerCards;
-
+                    CalcFields = Amount;
                     column(Sales_Order_No; "No.") { }
                     column(Sales_Order_Amount; Amount) { }
                     column(Sales_Order_Currency; "Currency Code") { }
@@ -44,7 +44,6 @@ report 65402 "Customer Cards Report"
                     ApplicationArea = All;
                     Caption = 'Starting Date';
                 }
-
                 field(ToDate; ToDate)
                 {
                     ApplicationArea = All;

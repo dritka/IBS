@@ -10,22 +10,25 @@ report 65401 "Cards Report"
     {
         dataitem(Cards; "Cards Type Table")
         {
+            PrintOnlyIfDetail = true;
             column(Card_Type; "Card Type") { }
             column(No_Of_Sales_Order; NoOfSalesOrder) { }
             column(Sales_Order_Amount; SalesOrderAmount) { }
 
-            trigger OnPreDataItem()
+            trigger OnAfterGetRecord()
             var
-                Rec: Record "Sales Header";
+                myInt: Integer;
+                SalesInvoiceHeader: Record "Sales Invoice Header";
             begin
                 NoOfSalesOrder := 0;
                 SalesOrderAmount := 0;
-
-                Rec.SetRange("Card Type", "Card Type");
+                SalesInvoiceHeader.SetRange("Card Type", "Card Type");
+                SalesInvoiceHeader.SetRange("Posting Date", FromDate, ToDate);
+                SalesInvoiceHeader.CalcFields("Amount Including Vat");
                 repeat
                     NoOfSalesOrder += 1;
-                    SalesOrderAmount += Rec."Amount Including VAT";
-                until Rec.Next() = 0
+                    SalesOrderAmount += SalesInvoiceHeader."Amount Including VAT";
+                until SalesInvoiceHeader.Next() = 0;
             end;
         }
     }
@@ -56,6 +59,7 @@ report 65401 "Cards Report"
         CardTypeLbl = 'Card Type';
         NoOfSalesOrderLbl = 'Nr. Of Sales Order';
         SalesOrderAmountLbl = 'Sales Order Amount';
+        SalesPerCardTypeLbl = 'Sales per Card Type';
     }
 
     var

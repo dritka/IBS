@@ -2,7 +2,7 @@ pageextension 65400 "Customer List Extension" extends "Customer List"
 {
     actions
     {
-        addlast(Reports)
+        addfirst(Reports)
         {
             action("Cards Report 1")
             {

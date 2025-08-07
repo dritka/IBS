@@ -4,19 +4,13 @@ table 65401 "Cards Type Table"
 
     fields
     {
-        field(1; "Card Type"; Code[20]) { DataClassification = CustomerContent; }
+        field(1; "Card Type"; Enum "Card Type") { DataClassification = CustomerContent; }
         field(2; "Description"; Text[100]) { DataClassification = CustomerContent; }
-
-        field(3; "Debit/Credit"; Option)
-        {
-            DataClassification = CustomerContent;
-            OptionMembers = "Debit","Credit";
-            OptionCaption = 'Debit, Credit';
-        }
+        field(3; "Debit/Credit"; Enum "Debit/Credit") { DataClassification = CustomerContent; }
     }
 
     keys
     {
-        key(PK; "Card Type") { Clustered = true; }
+        key(PK; "Card Type", "Debit/Credit") { Clustered = true; }
     }
 }
