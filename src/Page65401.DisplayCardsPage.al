@@ -6,9 +6,6 @@ page 65401 "Display Cards Page"
     SourceTable = "Customer Cards Table";
 
     Editable = false;
-    ModifyAllowed = false;
-    InsertAllowed = false;
-    DeleteAllowed = false;
 
     layout
     {
@@ -41,10 +38,4 @@ page 65401 "Display Cards Page"
 
     var
         CustomerActionLbl: Label 'Customer Cards';
-        Text000: Label 'Cards for the Customer with Customer No.: %1';
-
-    trigger OnOpenPage()
-    begin
-        Message(Text000, Rec."Customer No.");
-    end;
 }

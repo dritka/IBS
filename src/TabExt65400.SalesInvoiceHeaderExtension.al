@@ -11,9 +11,6 @@ tableextension 65400 "Sales Invoice Header Extension" extends "Sales Invoice Hea
         {
             FieldClass = FlowField;
             CalcFormula = lookup("Customer Cards Table"."Card Code" where("Customer No." = field("Sell-to Customer No.")));
-
-            // Caption = 'Card Code';
-            // TableRelation = "Customer Cards Table"."Card Code";
         }
         modify("Sell-to Customer No.")
         {

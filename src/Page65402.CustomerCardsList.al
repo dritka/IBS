@@ -5,11 +5,15 @@ page 65402 "Customer Cards List"
     UsageCategory = Lists;
     SourceTable = "Customer Cards Table";
 
+    InsertAllowed = false;
+    ModifyAllowed = false;
+    DeleteAllowed = true;
+
     layout
     {
         area(Content)
         {
-            group(Group)
+            repeater("Customer List")
             {
                 field("Customer No."; Rec."Customer No.")
                 {
@@ -19,13 +23,11 @@ page 65402 "Customer Cards List"
                 field("Card Type"; Rec."Card Type")
                 {
                     ApplicationArea = All;
-                    ShowMandatory = true;
                     Caption = 'Card Type';
                 }
                 field("Card Code"; Rec."Card Code")
                 {
                     ApplicationArea = All;
-                    ShowMandatory = true;
                     Caption = 'Card Code';
                 }
                 field("Description"; Rec."Description")
@@ -36,13 +38,11 @@ page 65402 "Customer Cards List"
                 field("CVS"; Rec."CVS")
                 {
                     ApplicationArea = All;
-                    ShowMandatory = true;
                     Caption = 'CVS';
                 }
                 field("Valid Thru"; Rec."Valid Thru")
                 {
                     ApplicationArea = All;
-                    ShowMandatory = true;
                     Caption = 'Valid Thru';
                 }
             }

@@ -50,6 +50,15 @@
       </DefaultValue>
       <Prompt>SalesOrderAmountLbl</Prompt>
     </ReportParameter>
+    <ReportParameter Name="SalesPerCardTypeLbl">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>SalesPerCardTypeLbl</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>SalesPerCardTypeLbl</Prompt>
+    </ReportParameter>
   </ReportParameters>
   <Code>Public Function BlankZero(ByVal Value As Decimal)
     if Value = 0 then

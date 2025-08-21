@@ -17,7 +17,6 @@ report 65401 "Cards Report"
 
             trigger OnAfterGetRecord()
             var
-                myInt: Integer;
                 SalesInvoiceHeader: Record "Sales Invoice Header";
             begin
                 NoOfSalesOrder := 0;
