@@ -81,6 +81,42 @@ page 65400 "Customer Cards Page"
         }
     }
 
+    actions
+    {
+        area(Processing)
+        {
+            action("Print current customer details")
+            {
+                ApplicationArea = All;
+
+                trigger OnAction()
+                var
+                    OutputMessage: Text;
+                begin
+                    OutputMessage += ('Description: ' + Rec."Description" + '\');
+                    OutputMessage += ('Customer No.: ' + Rec."Customer No." + '\');
+                    OutputMessage += ('Card code: ' + Rec."Card Code" + '\');
+                    OutputMessage += ('Card type: ' + Format(Rec."Card Type") + '\');
+                    OutputMessage += ('CVS: ' + Rec."CVS" + '\');
+                    OutputMessage += ('Valid Thru: ' + Format(Rec."Valid Thru", 0, '<Month, 2>/<Year, 4>') + '\');
+                end;
+            }
+        }
+    }
+
+    trigger OnDeleteRecord(): Boolean
+    var
+        OutputMessage: Text;
+    begin
+        OutputMessage += ('Description: ' + Rec."Description" + '\');
+        OutputMessage += ('Customer No.: ' + Rec."Customer No." + '\');
+        OutputMessage += ('Card code: ' + Rec."Card Code" + '\');
+        OutputMessage += ('Card type: ' + Format(Rec."Card Type") + '\');
+        OutputMessage += ('CVS: ' + Rec."CVS" + '\');
+        OutputMessage += ('Valid Thru: ' + Format(Rec."Valid Thru", 0, '<Month, 2>/<Year, 4>') + '\');
+        exit(true);
+    end;
+
     trigger OnQueryClosePage(CloseAction: Action): Boolean
     var
         ErrorText: Text;
