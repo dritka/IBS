@@ -99,6 +99,7 @@ page 65400 "Customer Cards Page"
                     OutputMessage += ('Card type: ' + Format(Rec."Card Type") + '\');
                     OutputMessage += ('CVS: ' + Rec."CVS" + '\');
                     OutputMessage += ('Valid Thru: ' + Format(Rec."Valid Thru", 0, '<Month, 2>/<Year, 4>') + '\');
+                    Message(OutputMessage);
                 end;
             }
         }
@@ -114,6 +115,7 @@ page 65400 "Customer Cards Page"
         OutputMessage += ('Card type: ' + Format(Rec."Card Type") + '\');
         OutputMessage += ('CVS: ' + Rec."CVS" + '\');
         OutputMessage += ('Valid Thru: ' + Format(Rec."Valid Thru", 0, '<Month, 2>/<Year, 4>') + '\');
+        Message(OutputMessage);
         exit(true);
     end;
 
@@ -128,9 +130,9 @@ page 65400 "Customer Cards Page"
 
         if Rec."Card Type" = "Card Type"::Default then
             ErrorText += 'Card Type must be filled in.\';
-        if Rec."Card Code" = '' then
+        if (Rec."Card Code" = '') or (StrLen(Rec."Card Code") <> 16) then
             ErrorText += 'Card Code must be filled in and 16 digits long exactly.\';
-        if Rec."CVS" = '' then
+        if (Rec."CVS" = '') or (StrLen(Rec."CVS") <> 3) then
             ErrorText += 'CVS must be filled in and 3 digits long exactly.\';
         if Rec."Valid Thru" = 0D then
             ErrorText += 'Valid Thru date must be filled';
