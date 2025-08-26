@@ -5,6 +5,8 @@ page 65400 "Customer Cards Page"
     UsageCategory = History;
     SourceTable = "Customer Cards Table";
 
+    DeleteAllowed = false;
+
     layout
     {
         area(Content)
@@ -67,16 +69,15 @@ page 65400 "Customer Cards Page"
                 {
                     ApplicationArea = All;
                     ShowMandatory = true;
-                    Caption = 'Valid Thru (Month/Year)';
-
-                    /*
-                    trigger OnValidate()
-                    begin
-                        if Rec."Valid Thru" = 0D then
-                            Error('Valid Thru date cannot be empty!')
-                    end;
-                    */
+                    AutoFormatExpression = Format(Rec."Valid Thru", 0, '<Month, 2>/<Year, 4>');
                 }
+                /*
+                field("Valid Thru Formatted"; ValidThruFormattedLbl)
+                {
+                    ApplicationArea = All;
+                    Caption = 'Valid Thru (Year/Month)';
+                }
+                */
             }
         }
     }
@@ -87,6 +88,10 @@ page 65400 "Customer Cards Page"
         {
             action("Print current customer details")
             {
+                Promoted = true;
+                PromotedIsBig = true;
+                PromotedCategory = Process;
+                Image = ShowSelected;
                 ApplicationArea = All;
 
                 trigger OnAction()
@@ -102,21 +107,48 @@ page 65400 "Customer Cards Page"
                     Message(OutputMessage);
                 end;
             }
+
+            action("Delete current customer")
+            {
+                Promoted = true;
+                PromotedIsBig = true;
+                PromotedCategory = Process;
+                Image = Delete;
+                ApplicationArea = All;
+
+                trigger OnAction()
+                var
+                    TempCustomer: Record "Customer Cards Table";
+                    CustomerRecord: Record "Customer Cards Table";
+                begin
+                    CustomerRecord.Get(Rec."Card Code");
+                    CustomerRecord.Delete();
+                    CurrPage.Close();
+                    TempCustomer."Customer No." := '';
+                    TempCustomer."Card Code" := '';
+                    TempCustomer."Card Type" := "Card Type"::Default;
+                    TempCustomer."CVS" := '';
+                    TempCustomer."Description" := '';
+                    TempCustomer."Valid Thru" := 0D;
+                    Page.Run(Page::"Customer Cards Page", TempCustomer);
+                end;
+            }
         }
     }
 
-    trigger OnDeleteRecord(): Boolean
+    /*
     var
-        OutputMessage: Text;
+        ValidThruFormattedLbl: Code[5];
+
+    local procedure FormatDate()
     begin
-        OutputMessage += ('Description: ' + Rec."Description" + '\');
-        OutputMessage += ('Customer No.: ' + Rec."Customer No." + '\');
-        OutputMessage += ('Card code: ' + Rec."Card Code" + '\');
-        OutputMessage += ('Card type: ' + Format(Rec."Card Type") + '\');
-        OutputMessage += ('CVS: ' + Rec."CVS" + '\');
-        OutputMessage += ('Valid Thru: ' + Format(Rec."Valid Thru", 0, '<Month, 2>/<Year, 4>') + '\');
-        Message(OutputMessage);
-        exit(true);
+        ValidThruFormattedLbl := Format(Rec."Valid Thru Date", 0, '<Month, 2>/<Year, 4>');
+    end;
+    */
+
+    trigger OnDeleteRecord(): Boolean
+    begin
+        exit(false);
     end;
 
     trigger OnQueryClosePage(CloseAction: Action): Boolean

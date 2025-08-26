@@ -32,6 +32,13 @@ table 65400 "Customer Cards Table"
             DataClassification = CustomerContent;
             TableRelation = Customer."No.";
         }
+        /*
+        field(5000; "Valid Thru Date"; Date)
+        {
+            DataClassification = CustomerContent;
+            NotBlank = true;
+        }
+        */
     }
 
     keys
