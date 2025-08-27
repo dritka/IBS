@@ -2,8 +2,8 @@ table 50101 StudentGradesTable
 {
     DataClassification = CustomerContent;
     Caption = 'List of grades for all students';
-    // LookupPageId = GradesCardPage;
-    // DrillDownPageId = GradesCardPage;
+    LookupPageId = GradesCardPage;
+    DrillDownPageId = GradesCardPage;
 
     fields
     {
@@ -13,19 +13,19 @@ table 50101 StudentGradesTable
             AutoIncrement = true;
             InitValue = 1;
         }
-        field(2; "Student ID"; Code[10])
+        field(2; "Student ID"; Text[10])
         {
             TableRelation = StudentTable."Student ID";
             DataClassification = CustomerContent;
             NotBlank = true;
         }
-        field(3; "Teacher ID"; Code[10])
+        field(3; "Teacher ID"; Text[10])
         {
             TableRelation = TeacherTable."Teacher ID";
             DataClassification = CustomerContent;
             NotBlank = true;
         }
-        field(4; "Grade"; Integer)
+        field(4; "Grade"; Decimal)
         {
             DataClassification = CustomerContent;
             NotBlank = true;

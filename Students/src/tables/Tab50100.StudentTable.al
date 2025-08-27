@@ -2,38 +2,30 @@ table 50100 StudentTable
 {
     DataClassification = CustomerContent;
     Caption = 'List of students';
-    // LookupPageId = StudentCardPage;
-    // DrillDownPageId = StudentCardPage;
+    LookupPageId = StudentCardPage;
+    DrillDownPageId = StudentCardPage;
 
     fields
     {
-        field(1; "Student ID"; Code[5])
+        field(1; "Student ID"; Text[5]) { DataClassification = CustomerContent; }
+        field(2; "First Name"; Text[20])
         {
             DataClassification = CustomerContent;
             NotBlank = true;
         }
-        field(2; "First Name"; Code[20])
-        {
-            DataClassification = CustomerContent;
-            NotBlank = true;
-            Caption = 'First Name';
-        }
-        field(3; "Last Name"; Code[20])
+        field(3; "Last Name"; Text[20])
         {
             DataClassification = CustomerContent;
             NotBlank = true;
         }
-        field(4; "Full Name"; Code[50])
-        {
-            DataClassification = CustomerContent;
-        }
+        field(4; "Full Name"; Text[50]) { DataClassification = CustomerContent; }
         field(5; "Age"; Integer)
         {
             DataClassification = CustomerContent;
             NotBlank = true;
             InitValue = 0;
         }
-        field(6; "Class"; Code[10])
+        field(6; "Class"; Enum ClassEnum)
         {
             DataClassification = CustomerContent;
             NotBlank = true;
