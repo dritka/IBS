@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en-US" original="Testing">
+    <body>
+      <group id="body">
+        <trans-unit id="Table 4003081921 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>List of grades for all students</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table StudentGrades - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4003081921 - Field 883711285 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Entry No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table StudentGrades - Field Entry No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4003081921 - Field 2817493743 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Grade</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table StudentGrades - Field Grade - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4003081921 - Field 2817493743 - Method 2126772001 - NamedType 2476940767" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The grade should be between 1 and 5 (inclusive)!</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table StudentGrades - Field Grade - Method OnValidate - NamedType Text000</note>
+        </trans-unit>
+        <trans-unit id="Table 4003081921 - Field 2289946216 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Registered Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table StudentGrades - Field RegisteredDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4003081921 - Field 4144203312 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Student ID</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table StudentGrades - Field Student ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4003081921 - Field 4144203312 - Method 2126772001 - NamedType 2476940767" size-unit="char" translate="yes" xml:space="preserve">
+          <source>There is no student with the Student ID %1 in the student table!</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table StudentGrades - Field Student ID - Method OnValidate - NamedType Text000</note>
+        </trans-unit>
+        <trans-unit id="Table 4003081921 - Field 507609835 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Teacher ID</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table StudentGrades - Field Teacher ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4003081921 - Field 507609835 - Method 2126772001 - NamedType 2476940767" size-unit="char" translate="yes" xml:space="preserve">
+          <source>There is no teacher with the Teacher ID %1 in the teacher table</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table StudentGrades - Field Teacher ID - Method OnValidate - NamedType Text000</note>
+        </trans-unit>
+        <trans-unit id="Table 2922869785 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>List of students</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table StudentTable - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2922869785 - Field 3558390861 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Age</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table StudentTable - Field Age - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2922869785 - Field 3973653471 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>First Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table StudentTable - Field FirstName - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2922869785 - Field 1955082680 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Full Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table StudentTable - Field FullName - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2922869785 - Field 2357709898 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>GPA</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table StudentTable - Field GPA - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2922869785 - Field 4082585823 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Last Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table StudentTable - Field LastName - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2922869785 - Field 4144203312 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Student ID</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table StudentTable - Field Student ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3542167094 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>List of teachers</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table TeacherTable - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3542167094 - NamedType 2476940767" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The %1 field should not be empty</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table TeacherTable - NamedType Text000</note>
+        </trans-unit>
+        <trans-unit id="Table 3542167094 - Field 632334177 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Administrator Privileges</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table TeacherTable - Field Admin - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3542167094 - Field 3454070650 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Responsible For</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table TeacherTable - Field Class - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3542167094 - Field 3973653471 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>First Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table TeacherTable - Field FirstName - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3542167094 - Field 1955082680 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Full Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table TeacherTable - Field FullName - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3542167094 - Field 4082585823 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Last Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table TeacherTable - Field LastName - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3542167094 - Field 507609835 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Teacher ID</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table TeacherTable - Field Teacher ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 518852238 - Method 1598107437 - NamedType 2476940767" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Done calculating the GPA for Student %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit StudentManagement - Method CalculateAllGPA - NamedType Text000</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 518852238 - Method 1598107437 - NamedType 3114637384" size-unit="char" translate="yes" xml:space="preserve">
+          <source>There was a problem while calculating the GPA for Student %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit StudentManagement - Method CalculateAllGPA - NamedType Text001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 518852238 - Method 4201041670 - NamedType 2476940767" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Done calculating the GPA for Student %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit StudentManagement - Method CalculateGPA - NamedType Text000</note>
+        </trans-unit>
+        <trans-unit id="Page 2382495511 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Student Grades</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page GradesPage - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2382495511 - Control 2289946216 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Date when the grade was registered</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page GradesPage - Control RegisteredDate - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2382495511 - Action 2406315884 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Delete all the record</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page GradesPage - Action Delete All - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2382495511 - Action 2406315884 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Delete All</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page GradesPage - Action Delete All - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2382495511 - Action 2079045816 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Closes the current page</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page GradesPage - Action OK - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2382495511 - Action 2079045816 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>OK</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page GradesPage - Action OK - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2327325646 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Students</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page StudentPage - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2327325646 - Action 3193663406 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Calculates the GPA of the current student</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page StudentPage - Action Calculate GPA - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2327325646 - Action 3193663406 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Calculate</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page StudentPage - Action Calculate GPA - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2327325646 - Action 2079045816 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Closes the current page</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page StudentPage - Action OK - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2327325646 - Action 2079045816 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>OK</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page StudentPage - Action OK - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2627121305 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Teachers</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page TeacherPage - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2627121305 - Control 3454070650 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The class for which the teacher is responsible</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page TeacherPage - Control Class - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2627121305 - Action 2079045816 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Closes the current page</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page TeacherPage - Action OK - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2627121305 - Action 2079045816 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>OK</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page TeacherPage - Action OK - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PermissionSet 724070291 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Students</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PermissionSet StudentPermissions - Property Caption</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

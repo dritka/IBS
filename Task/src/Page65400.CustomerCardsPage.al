@@ -23,28 +23,12 @@ page 65400 "Customer Cards Page"
                     ApplicationArea = All;
                     ShowMandatory = true;
                     Caption = 'Card Type';
-
-                    /*
-                    trigger OnValidate()
-                    begin
-                        if Rec."Card Type" = "Card Type"::Default then
-                            Error('Default is not a valid card type, please select a valid card type!')
-                    end;
-                    */
                 }
                 field("Card Code"; Rec."Card Code")
                 {
                     ApplicationArea = All;
                     ShowMandatory = true;
                     Caption = 'Card Code';
-
-                    /*
-                    trigger OnValidate()
-                    begin
-                        if StrLen(Rec."Card Code") <> 16 then
-                            Error('Card Code must be exactly 16 characters long!')
-                    end;
-                    */
                 }
                 field("Description"; Rec."Description")
                 {
@@ -56,14 +40,6 @@ page 65400 "Customer Cards Page"
                     ApplicationArea = All;
                     ShowMandatory = true;
                     Caption = 'CVS';
-
-                    /*
-                    trigger OnValidate()
-                    begin
-                        if StrLen(Rec."CVS") <> 3 then
-                            Error('CVS must be exactly 3 characters long!')
-                    end;
-                    */
                 }
                 field("Valid Thru"; Rec."Valid Thru")
                 {
@@ -71,13 +47,6 @@ page 65400 "Customer Cards Page"
                     ShowMandatory = true;
                     AutoFormatExpression = Format(Rec."Valid Thru", 0, '<Month, 2>/<Year, 4>');
                 }
-                /*
-                field("Valid Thru Formatted"; ValidThruFormattedLbl)
-                {
-                    ApplicationArea = All;
-                    Caption = 'Valid Thru (Year/Month)';
-                }
-                */
             }
         }
     }
@@ -108,7 +77,7 @@ page 65400 "Customer Cards Page"
                 end;
             }
 
-            action("Delete current customer")
+            action("Delete current customer card")
             {
                 Promoted = true;
                 PromotedIsBig = true;
@@ -136,16 +105,6 @@ page 65400 "Customer Cards Page"
         }
     }
 
-    /*
-    var
-        ValidThruFormattedLbl: Code[5];
-
-    local procedure FormatDate()
-    begin
-        ValidThruFormattedLbl := Format(Rec."Valid Thru Date", 0, '<Month, 2>/<Year, 4>');
-    end;
-    */
-
     trigger OnDeleteRecord(): Boolean
     begin
         exit(false);
@@ -155,7 +114,7 @@ page 65400 "Customer Cards Page"
     var
         ErrorText: Text;
     begin
-        if AllFieldsEmpty(Rec) then
+        if AllFieldsEmpty() then
             exit(true);
 
         ErrorText := '';
@@ -176,7 +135,7 @@ page 65400 "Customer Cards Page"
         exit(true);
     end;
 
-    local procedure AllFieldsEmpty(CustomerRecord: Record "Customer Cards Table"): Boolean
+    local procedure AllFieldsEmpty(): Boolean
     begin
         if (Rec."Description" = '') and
            (Rec."Card Type" = "Card Type"::Default) and

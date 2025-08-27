@@ -25,11 +25,10 @@ page 65401 "Display Cards Page"
                     Caption = 'Open customer card';
                     trigger OnDrillDown()
                     var
-                        CustomerCards: Page "Customer Cards Page";
                         CustomerRec: Record "Customer Cards Table";
                     begin
                         CustomerRec.SetRange("Customer No.", Rec."Customer No.");
-                        CustomerCards.Run();
+                        Page.Run(Page::"Customer Cards Page", CustomerRec);
                     end;
                 }
             }
