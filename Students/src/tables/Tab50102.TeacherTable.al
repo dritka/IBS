@@ -2,8 +2,8 @@ table 50102 TeacherTable
 {
     DataClassification = CustomerContent;
     Caption = 'List of teachers';
-    LookupPageId = TeacherCardPage;
-    DrillDownPageId = TeacherCardPage;
+    // LookupPageId = TeacherCardPage;
+    // DrillDownPageId = TeacherCardPage;
 
     fields
     {
@@ -38,7 +38,7 @@ table 50102 TeacherTable
             Caption = 'Administrator Privileges';
         }
 
-        field(6; "Class"; Code[10])
+        field(6; "Class"; Enum ClassEnum)
         {
             DataClassification = CustomerContent;
             Caption = 'Responsible For';

@@ -2,8 +2,8 @@ table 50101 StudentGradesTable
 {
     DataClassification = CustomerContent;
     Caption = 'List of grades for all students';
-    LookupPageId = GradesCardPage;
-    DrillDownPageId = GradesCardPage;
+    // LookupPageId = GradesCardPage;
+    // DrillDownPageId = GradesCardPage;
 
     fields
     {

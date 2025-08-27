@@ -2,8 +2,8 @@ table 50100 StudentTable
 {
     DataClassification = CustomerContent;
     Caption = 'List of students';
-    LookupPageId = StudentCardPage;
-    DrillDownPageId = StudentCardPage;
+    // LookupPageId = StudentCardPage;
+    // DrillDownPageId = StudentCardPage;
 
     fields
     {
