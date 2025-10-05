@@ -34,7 +34,8 @@ page 50104 TeacherCardPage
 
                     trigger OnAssistEdit()
                     begin
-                        Rec."Full Name" := Rec."First Name" + ' ' + Rec."Last Name";
+                        if (Rec."First Name" <> '') and (Rec."Last Name" <> '') then
+                            Rec."Full Name" := Rec."First Name" + ' ' + Rec."Last Name";
                     end;
                 }
                 field("Admin"; Rec."Admin")
@@ -88,19 +89,6 @@ page 50104 TeacherCardPage
                 trigger OnAction()
                 begin
                     // TO DO
-                end;
-            }
-            action("Clear all fields")
-            {
-                Image = ClearFilter;
-                Promoted = true;
-                PromotedIsBig = true;
-                PromotedCategory = Process;
-                ApplicationArea = All;
-
-                trigger OnAction()
-                begin
-
                 end;
             }
         }

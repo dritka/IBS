@@ -49,20 +49,6 @@ page 50102 GradesCardPage
                     // TO DO
                 end;
             }
-
-            action("Clear all fields")
-            {
-                Image = ClearFilter;
-                Promoted = true;
-                PromotedIsBig = true;
-                PromotedCategory = Process;
-                ApplicationArea = All;
-
-                trigger OnAction()
-                begin
-                    // TO DO
-                end;
-            }
         }
     }
 }

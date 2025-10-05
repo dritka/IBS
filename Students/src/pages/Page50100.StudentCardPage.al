@@ -34,7 +34,8 @@ page 50100 StudentCardPage
 
                     trigger OnAssistEdit()
                     begin
-                        Rec."Full Name" := Rec."First Name" + ' ' + Rec."Last Name";
+                        if (Rec."First Name" <> '') and (Rec."Last Name" <> '') then
+                            Rec."Full Name" := Rec."First Name" + ' ' + Rec."Last Name";
                     end;
                 }
                 field("Age"; Rec."Age")
@@ -91,26 +92,18 @@ page 50100 StudentCardPage
                     // TO DO
                 end;
             }
-
-            action("Clear all fields")
-            {
-                Image = ClearFilter;
-                Promoted = true;
-                PromotedIsBig = true;
-                PromotedCategory = Process;
-                ApplicationArea = All;
-
-                trigger OnAction()
-                begin
-                    // TO DO
-                end;
-            }
         }
     }
 
-    trigger OnQueryClosePage(CloseAction: Action): Boolean
     var
         CodeU: Codeunit Management;
+
+    trigger OnInsertRecord(BelowxRec: Boolean): Boolean
+    begin
+        exit(CodeU.AllMandatoryFields(Rec));
+    end;
+
+    trigger OnQueryClosePage(CloseAction: Action): Boolean
     begin
         exit(CodeU.AllMandatoryFields(Rec));
     end;
